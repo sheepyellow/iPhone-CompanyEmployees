@@ -8,10 +8,12 @@
 
 #import "RootViewController.h"
 #import "AddEmployeeViewController.h"
+#import "ViewEmployeesViewController.h"
 
 @implementation RootViewController
 
 @synthesize addEmployeeViewController;
+@synthesize viewEmployeeViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -58,8 +60,21 @@
         self.addEmployeeViewController = addEmployee;
         [addEmployee release];
     }
-    
+
     [self.navigationController pushViewController:self.addEmployeeViewController animated:YES];
+    //presentModalViewController
+}
+
+- (IBAction)switchPageViewEmployees:(id)sender {
+    if(self.viewEmployeeViewController == nil)
+    {
+        ViewEmployeesViewController *viewEmployees = [[ViewEmployeesViewController alloc] initWithNibName:@"ViewEmployeesViewController" bundle:[NSBundle mainBundle]];
+        self.viewEmployeeViewController = viewEmployees;
+        [viewEmployees release];
+    }
+    
+    [self.navigationController pushViewController:self.viewEmployeeViewController animated:YES];
+    //presentModalViewController
 }
 
 @end

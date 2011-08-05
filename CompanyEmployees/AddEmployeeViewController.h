@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddEmployeeViewController : UIViewController
+@class EmployeeInfo;
+
+@interface AddEmployeeViewController : UIViewController {
+    IBOutlet UITextField *txtEmployeeName;
+	IBOutlet UITextField *txtEmployeeEmail;
+}
 
 @end

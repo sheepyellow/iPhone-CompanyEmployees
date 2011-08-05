@@ -8,13 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "AddEmployeeViewController.h"
+#import "ViewEmployeesViewController.h"
+#import "CompanyEmployeesAppDelegate.h"
+
+@class EmployeeInfo;
 
 @interface RootViewController : UIViewController {
+    //CompanyEmployeesAppDelegate *appDelegate;
     AddEmployeeViewController *addEmployeeViewController;
+    ViewEmployeesViewController *viewEmployeeViewController;
+    //UINavigationController *addNavigationController;
 }
 
 @property (nonatomic, retain) AddEmployeeViewController *addEmployeeViewController;
 
+@property (nonatomic, retain) ViewEmployeesViewController *viewEmployeeViewController;
+
 - (IBAction)switchPageAddEmployee:(id)sender;
+- (IBAction)switchPageViewEmployees:(id)sender;
 
 @end

@@ -7,14 +7,28 @@
 //
 
 #import "CompanyEmployeesAppDelegate.h"
+#import "RootViewController.h"
+#import "EmployeeInfo.h"
 
 @implementation CompanyEmployeesAppDelegate
 
 @synthesize window = _window;
 @synthesize navigationController = _navigationController;
+@synthesize employeeArray;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //Copy database to the user's phone if needed.
+	[self copyDatabaseIfNeeded];
+	
+	//Initialize the coffee array.
+	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+	self.employeeArray = tempArray;
+	[tempArray release];
+	
+	//Once the db is copied, get the initial data to display on the screen.
+	[EmployeeInfo getInitialDataToDisplay:[self getDBPath]];
+    
     [self.window addSubview:[_navigationController view]];
     
     // Override point for customization after application launch.
@@ -66,6 +80,54 @@
     [_navigationController release];
     [_window release];
     [super dealloc];
+}
+
+
+- (void) copyDatabaseIfNeeded {
+	
+	//Using NSFileManager we can perform many file system operations.
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSError *error;
+	NSString *dbPath = [self getDBPath];
+	BOOL success = [fileManager fileExistsAtPath:dbPath]; 
+	
+	if(!success) {
+		
+		NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"CompanyEmployees.sqlite"];
+		success = [fileManager copyItemAtPath:defaultDBPath toPath:dbPath error:&error];
+		
+		if (!success) 
+			NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+	}	
+}
+
+- (NSString *) getDBPath {
+	
+	//Search for standard documents using NSSearchPathForDirectoriesInDomains
+	//First Param = Searching the documents directory
+	//Second Param = Searching the Users directory and not the System
+	//Expand any tildes and identify home directories.
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+	NSString *documentsDir = [paths objectAtIndex:0];
+	return [documentsDir stringByAppendingPathComponent:@"CompanyEmployees.sqlite"];
+}
+
+- (void) removeEmployee:(EmployeeInfo *)employeeObj {
+	
+	//Delete it from the database.
+	[employeeObj deleteEmployee];
+	
+	//Remove it from the array.
+	[employeeArray removeObject:employeeObj];
+}
+
+- (void) addEmployee:(EmployeeInfo *)employeeObj {
+	
+	//Add it to the database.
+	[employeeObj addEmployee];
+	
+	//Add it to the coffee array.
+	[employeeArray addObject:employeeObj];
 }
 
 @end

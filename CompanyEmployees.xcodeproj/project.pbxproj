@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B42C0EE13EC89F700D5ABF1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B42C0ED13EC89F700D5ABF1 /* libsqlite3.dylib */; };
+		2B42C0F813EC932B00D5ABF1 /* ViewEmployeesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B42C0F613EC932B00D5ABF1 /* ViewEmployeesViewController.m */; };
+		2B42C0F913EC932B00D5ABF1 /* ViewEmployeesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B42C0F713EC932B00D5ABF1 /* ViewEmployeesViewController.xib */; };
 		2B45074513EC515600E2DAF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B45074413EC515600E2DAF9 /* UIKit.framework */; };
 		2B45074713EC515600E2DAF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B45074613EC515600E2DAF9 /* Foundation.framework */; };
 		2B45074913EC515600E2DAF9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B45074813EC515600E2DAF9 /* CoreGraphics.framework */; };
@@ -19,9 +22,14 @@
 		2B45076A13EC547800E2DAF9 /* AddEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B45076813EC547800E2DAF9 /* AddEmployeeViewController.m */; };
 		2B45076B13EC547800E2DAF9 /* AddEmployeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B45076913EC547800E2DAF9 /* AddEmployeeViewController.xib */; };
 		2B45077013EC6CB800E2DAF9 /* CompanyEmployees.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2B45076F13EC6CB700E2DAF9 /* CompanyEmployees.sqlite */; };
+		2B45077913EC7E2E00E2DAF9 /* EmployeeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B45077813EC7E2E00E2DAF9 /* EmployeeInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B42C0ED13EC89F700D5ABF1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		2B42C0F513EC932B00D5ABF1 /* ViewEmployeesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewEmployeesViewController.h; sourceTree = "<group>"; };
+		2B42C0F613EC932B00D5ABF1 /* ViewEmployeesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewEmployeesViewController.m; sourceTree = "<group>"; };
+		2B42C0F713EC932B00D5ABF1 /* ViewEmployeesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewEmployeesViewController.xib; sourceTree = "<group>"; };
 		2B45074013EC515600E2DAF9 /* CompanyEmployees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyEmployees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B45074413EC515600E2DAF9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2B45074613EC515600E2DAF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,6 +48,8 @@
 		2B45076813EC547800E2DAF9 /* AddEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEmployeeViewController.m; sourceTree = "<group>"; };
 		2B45076913EC547800E2DAF9 /* AddEmployeeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEmployeeViewController.xib; sourceTree = "<group>"; };
 		2B45076F13EC6CB700E2DAF9 /* CompanyEmployees.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CompanyEmployees.sqlite; sourceTree = "<group>"; };
+		2B45077713EC7E2E00E2DAF9 /* EmployeeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeInfo.h; sourceTree = "<group>"; };
+		2B45077813EC7E2E00E2DAF9 /* EmployeeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +60,7 @@
 				2B45074513EC515600E2DAF9 /* UIKit.framework in Frameworks */,
 				2B45074713EC515600E2DAF9 /* Foundation.framework in Frameworks */,
 				2B45074913EC515600E2DAF9 /* CoreGraphics.framework in Frameworks */,
+				2B42C0EE13EC89F700D5ABF1 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +87,7 @@
 		2B45074313EC515600E2DAF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B42C0ED13EC89F700D5ABF1 /* libsqlite3.dylib */,
 				2B45074413EC515600E2DAF9 /* UIKit.framework */,
 				2B45074613EC515600E2DAF9 /* Foundation.framework */,
 				2B45074813EC515600E2DAF9 /* CoreGraphics.framework */,
@@ -97,6 +109,11 @@
 				2B45076713EC547800E2DAF9 /* AddEmployeeViewController.h */,
 				2B45076813EC547800E2DAF9 /* AddEmployeeViewController.m */,
 				2B45076913EC547800E2DAF9 /* AddEmployeeViewController.xib */,
+				2B45077713EC7E2E00E2DAF9 /* EmployeeInfo.h */,
+				2B45077813EC7E2E00E2DAF9 /* EmployeeInfo.m */,
+				2B42C0F513EC932B00D5ABF1 /* ViewEmployeesViewController.h */,
+				2B42C0F613EC932B00D5ABF1 /* ViewEmployeesViewController.m */,
+				2B42C0F713EC932B00D5ABF1 /* ViewEmployeesViewController.xib */,
 			);
 			path = CompanyEmployees;
 			sourceTree = "<group>";
@@ -167,6 +184,7 @@
 				2B45076613EC53DD00E2DAF9 /* RootViewController.xib in Resources */,
 				2B45076B13EC547800E2DAF9 /* AddEmployeeViewController.xib in Resources */,
 				2B45077013EC6CB800E2DAF9 /* CompanyEmployees.sqlite in Resources */,
+				2B42C0F913EC932B00D5ABF1 /* ViewEmployeesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +199,8 @@
 				2B45075513EC515600E2DAF9 /* CompanyEmployeesAppDelegate.m in Sources */,
 				2B45076513EC53DD00E2DAF9 /* RootViewController.m in Sources */,
 				2B45076A13EC547800E2DAF9 /* AddEmployeeViewController.m in Sources */,
+				2B45077913EC7E2E00E2DAF9 /* EmployeeInfo.m in Sources */,
+				2B42C0F813EC932B00D5ABF1 /* ViewEmployeesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +310,7 @@
 				2B45075D13EC515600E2DAF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
