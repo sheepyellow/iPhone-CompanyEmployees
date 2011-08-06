@@ -13,6 +13,10 @@
 @interface AddEmployeeViewController : UIViewController {
     IBOutlet UITextField *txtEmployeeName;
 	IBOutlet UITextField *txtEmployeeEmail;
+   	IBOutlet UITextField *txtEmployeePhone;
+   	IBOutlet UITextField *txtEmployeeDOB;
+   	IBOutlet UITextField *txtEmployeePhoto;
+   	IBOutlet UITextField *txtEmployeeNotes;
 }
 
 @end

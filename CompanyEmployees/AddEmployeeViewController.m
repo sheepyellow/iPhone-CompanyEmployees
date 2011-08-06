@@ -46,8 +46,12 @@
 											   initWithBarButtonSystemItem:UIBarButtonSystemItemSave 
 											   target:self action:@selector(save_Clicked:)] autorelease];
 	
-	self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+	//self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    
+    // Setup scroll view
+    //[scrollView setContentSize:CGSizeMake(backgroundImage.frame.size.width, backgroundImage.frame.size.height+200)];
 }
+
 
 - (void) viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
@@ -55,6 +59,9 @@
 	//Set the textboxes to empty string.
 	txtEmployeeEmail.text = @"";
 	txtEmployeeName.text = @"";
+    txtEmployeePhone.text = @"";
+    txtEmployeeDOB.text = @"";
+    txtEmployeeNotes.text = @"";
 	
 	//Make the coffe name textfield to be the first responder.
 	[txtEmployeeName becomeFirstResponder];
@@ -81,6 +88,10 @@
 	EmployeeInfo *employeeObj = [[EmployeeInfo alloc] initWithPrimaryKey:0];
 	employeeObj.employeeName = txtEmployeeName.text;
 	employeeObj.employeeEmail = txtEmployeeEmail.text;
+    employeeObj.employeePhone = txtEmployeePhone.text;
+    employeeObj.employeeDOB = txtEmployeeDOB.text;
+    //employeeObj.employeePhoto
+    employeeObj.employeeNotes = txtEmployeeNotes.text;
 	employeeObj.isDirty = NO;
 	employeeObj.isDetailViewHydrated = YES;
 	

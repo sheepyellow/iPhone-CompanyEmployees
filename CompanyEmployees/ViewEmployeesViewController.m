@@ -114,9 +114,15 @@
 	// Setup the animation
 	[self.navigationController pushViewController:self.employeeDetailsViewController animated:YES];
 	// Set the title of the view to the animal's name
+    self.employeeDetailsViewController.title = [employee employeeName];
+    
 	[self.employeeDetailsViewController.employeeName setText:[employee employeeName]];
 	// Set the description field to the animals description
 	[self.employeeDetailsViewController.employeeEmail setText:[employee employeeEmail]];
+    [self.employeeDetailsViewController.employeePhone setText:[employee employeePhone]];
+    [self.employeeDetailsViewController.employeeDOB setText:[employee employeeDOB]];
+    [self.employeeDetailsViewController.employeeNotes setText:[employee employeeNotes]];
+    
 	// Load the animals image into a NSData boject and then assign it to the UIImageView
 	//NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[animal imageURL]]];
 	//UIImage *animalImage = [[UIImage alloc] initWithData:imageData cache:YES];
@@ -127,7 +133,7 @@
 
 
 
-/*
+
 - (void)tableView:(UITableView *)tv commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
 forRowAtIndexPath:(NSIndexPath *)indexPath {
 	
@@ -141,7 +147,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 		[self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 	}
 }
-*/
+
 
 /*
  // Override to support conditional editing of the list
@@ -149,7 +155,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
  // Return NO if you do not want the specified item to be editable.
  return YES;
  }
- */
+*/
 
 
 /*

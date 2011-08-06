@@ -13,6 +13,10 @@
     NSInteger employeeID;
     NSString *employeeName;
     NSString *employeeEmail;
+    NSString *employeePhone;
+    NSString *employeeDOB;
+    NSString *employeePhoto;
+    NSString *employeeNotes;
 
     //Intrnal variables to keep track of the state of the object.
     BOOL isDirty;
@@ -22,6 +26,10 @@
 @property (nonatomic, readonly) NSInteger employeeID;
 @property (nonatomic, copy) NSString *employeeName;
 @property (nonatomic, copy) NSString *employeeEmail;
+@property (nonatomic, copy) NSString *employeePhone;
+@property (nonatomic, copy) NSString *employeeDOB;
+@property (nonatomic, copy) NSString *employeePhoto;
+@property (nonatomic, copy) NSString *employeeNotes;
 
 @property (nonatomic, readwrite) BOOL isDirty;
 @property (nonatomic, readwrite) BOOL isDetailViewHydrated;

@@ -1,5 +1,5 @@
 //
-//  EmployeeDetails.m
+//  EmployeeDetailsViewController.m
 //  CompanyEmployees
 //
 //  Created by Kevin Johnson on 8/5/11.
@@ -10,7 +10,7 @@
 
 @implementation EmployeeDetailsViewController
 
-@synthesize employeeName, employeeEmail;
+@synthesize employeeName, employeeEmail, employeePhone, employeeDOB, employeePhoto, employeeNotes;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
