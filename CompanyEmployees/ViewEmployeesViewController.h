@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "CompanyEmployeesAppDelegate.h"
+#import "EmployeeDetailsViewController.h"
 
 @interface ViewEmployeesViewController : UITableViewController {
     CompanyEmployeesAppDelegate *appDelegate;
+    
+    EmployeeDetailsViewController *employeeDetailsViewController;
 }
+
+@property (nonatomic, retain) EmployeeDetailsViewController *employeeDetailsViewController;
 
 @end

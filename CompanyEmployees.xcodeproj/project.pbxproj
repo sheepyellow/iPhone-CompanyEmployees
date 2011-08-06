@@ -10,6 +10,8 @@
 		2B42C0EE13EC89F700D5ABF1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B42C0ED13EC89F700D5ABF1 /* libsqlite3.dylib */; };
 		2B42C0F813EC932B00D5ABF1 /* ViewEmployeesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B42C0F613EC932B00D5ABF1 /* ViewEmployeesViewController.m */; };
 		2B42C0F913EC932B00D5ABF1 /* ViewEmployeesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B42C0F713EC932B00D5ABF1 /* ViewEmployeesViewController.xib */; };
+		2B42C0FD13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B42C0FB13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.m */; };
+		2B42C0FE13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B42C0FC13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.xib */; };
 		2B45074513EC515600E2DAF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B45074413EC515600E2DAF9 /* UIKit.framework */; };
 		2B45074713EC515600E2DAF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B45074613EC515600E2DAF9 /* Foundation.framework */; };
 		2B45074913EC515600E2DAF9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B45074813EC515600E2DAF9 /* CoreGraphics.framework */; };
@@ -30,6 +32,9 @@
 		2B42C0F513EC932B00D5ABF1 /* ViewEmployeesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewEmployeesViewController.h; sourceTree = "<group>"; };
 		2B42C0F613EC932B00D5ABF1 /* ViewEmployeesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewEmployeesViewController.m; sourceTree = "<group>"; };
 		2B42C0F713EC932B00D5ABF1 /* ViewEmployeesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewEmployeesViewController.xib; sourceTree = "<group>"; };
+		2B42C0FA13ECAA6900D5ABF1 /* EmployeeDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeDetailsViewController.h; sourceTree = "<group>"; };
+		2B42C0FB13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeDetailsViewController.m; sourceTree = "<group>"; };
+		2B42C0FC13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeDetailsViewController.xib; sourceTree = "<group>"; };
 		2B45074013EC515600E2DAF9 /* CompanyEmployees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyEmployees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B45074413EC515600E2DAF9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2B45074613EC515600E2DAF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +119,9 @@
 				2B42C0F513EC932B00D5ABF1 /* ViewEmployeesViewController.h */,
 				2B42C0F613EC932B00D5ABF1 /* ViewEmployeesViewController.m */,
 				2B42C0F713EC932B00D5ABF1 /* ViewEmployeesViewController.xib */,
+				2B42C0FA13ECAA6900D5ABF1 /* EmployeeDetailsViewController.h */,
+				2B42C0FB13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.m */,
+				2B42C0FC13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.xib */,
 			);
 			path = CompanyEmployees;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 				2B45076B13EC547800E2DAF9 /* AddEmployeeViewController.xib in Resources */,
 				2B45077013EC6CB800E2DAF9 /* CompanyEmployees.sqlite in Resources */,
 				2B42C0F913EC932B00D5ABF1 /* ViewEmployeesViewController.xib in Resources */,
+				2B42C0FE13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +210,7 @@
 				2B45076A13EC547800E2DAF9 /* AddEmployeeViewController.m in Sources */,
 				2B45077913EC7E2E00E2DAF9 /* EmployeeInfo.m in Sources */,
 				2B42C0F813EC932B00D5ABF1 /* ViewEmployeesViewController.m in Sources */,
+				2B42C0FD13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

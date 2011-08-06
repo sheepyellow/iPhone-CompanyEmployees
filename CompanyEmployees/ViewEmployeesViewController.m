@@ -7,9 +7,12 @@
 //
 
 #import "ViewEmployeesViewController.h"
+#import "EmployeeDetailsViewController.h"
 #import "EmployeeInfo.h"
 
 @implementation ViewEmployeesViewController
+
+@synthesize employeeDetailsViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -98,6 +101,26 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic -- create and push a new view controller
+    
+    CompanyEmployeesAppDelegate *appDelegate = (CompanyEmployeesAppDelegate *)[[UIApplication sharedApplication] delegate];
+	EmployeeInfo *employee = (EmployeeInfo *)[appDelegate.employeeArray objectAtIndex:indexPath.row];
+	
+	if(self.employeeDetailsViewController == nil) {
+		EmployeeDetailsViewController *viewController = [[EmployeeDetailsViewController alloc] initWithNibName:@"EmployeeDetailsViewController" bundle:nil];
+		self.employeeDetailsViewController = viewController;
+		[viewController release];
+	}
+	
+	// Setup the animation
+	[self.navigationController pushViewController:self.employeeDetailsViewController animated:YES];
+	// Set the title of the view to the animal's name
+	[self.employeeDetailsViewController.employeeName setText:[employee employeeName]];
+	// Set the description field to the animals description
+	[self.employeeDetailsViewController.employeeEmail setText:[employee employeeEmail]];
+	// Load the animals image into a NSData boject and then assign it to the UIImageView
+	//NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[animal imageURL]]];
+	//UIImage *animalImage = [[UIImage alloc] initWithData:imageData cache:YES];
+	//self.animalView.animalImage.image = animalImage;
 }
 
 
