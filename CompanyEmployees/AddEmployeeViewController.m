@@ -9,8 +9,11 @@
 #import "AddEmployeeViewController.h"
 #import "EmployeeInfo.h"
 #import "CompanyEmployeesAppDelegate.h"
+#import "ChoosePictureViewController.h"
 
 @implementation AddEmployeeViewController
+
+@synthesize scrollView, choosePictureViewController, imgEmployeePhoto;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,7 +52,15 @@
 	//self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
     // Setup scroll view
-    //[scrollView setContentSize:CGSizeMake(backgroundImage.frame.size.width, backgroundImage.frame.size.height+200)];
+    [scrollView setContentSize:CGSizeMake(scrollView.frame.size.width, scrollView.frame.size.height+200)];
+    
+    //scrollView.contentSize = 
+    //CGSizeMake(scrollView.frame.size.width, self.frame.size.height);
+	//scrollView.maximumZoomScale = 4.0;
+	//scrollView.minimumZoomScale = 0.75;
+	//scrollView.clipsToBounds = YES;
+	//scrollView.delegate = self;
+	//[scrollView addSubview:imageView];
 }
 
 
@@ -118,5 +129,38 @@
 	return YES;
 }
 
+
+- (IBAction)choosePhoto:(id)sender {
+    if(self.choosePictureViewController == nil)
+    {
+        ChoosePictureViewController *choosePicture = [[ChoosePictureViewController alloc] initWithNibName:@"ChoosePictureViewController" bundle:[NSBundle mainBundle]];
+        choosePicture.addEmployeeViewController = self;
+        self.choosePictureViewController = choosePicture;
+        [choosePicture release];
+    }
+    
+    [self.navigationController pushViewController:self.choosePictureViewController animated:YES];
+}
+
+- (void)didFinishWithCamera:(UIImage *)image {
+    [self.imgEmployeePhoto setImage:image];
+}
+- (void)didTakePicture:(UIImage *)picture {
+    
+}
+
+- (void)dealloc
+{	
+    [txtEmployeeDOB release];
+    [txtEmployeeEmail release];
+    [txtEmployeeName release];
+    [txtEmployeePhone release];
+    [txtEmployeeNotes release];
+    [imgEmployeePhoto release];
+    [choosePictureViewController release];
+    [scrollView release];
+
+    [super dealloc];
+}
 
 @end

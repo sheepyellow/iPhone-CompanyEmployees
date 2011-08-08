@@ -25,6 +25,10 @@
 		2B45076B13EC547800E2DAF9 /* AddEmployeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B45076913EC547800E2DAF9 /* AddEmployeeViewController.xib */; };
 		2B45077013EC6CB800E2DAF9 /* CompanyEmployees.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2B45076F13EC6CB700E2DAF9 /* CompanyEmployees.sqlite */; };
 		2B45077913EC7E2E00E2DAF9 /* EmployeeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B45077813EC7E2E00E2DAF9 /* EmployeeInfo.m */; };
+		2B5F66FC13F036B500E64934 /* ChoosePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F66FA13F036B400E64934 /* ChoosePictureViewController.m */; };
+		2B5F66FD13F036B500E64934 /* ChoosePictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5F66FB13F036B500E64934 /* ChoosePictureViewController.xib */; };
+		2B5F670E13F03C8300E64934 /* CameraOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F670C13F03C8200E64934 /* CameraOverlayViewController.m */; };
+		2B5F670F13F03C8300E64934 /* CameraOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5F670D13F03C8200E64934 /* CameraOverlayViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,12 @@
 		2B45076F13EC6CB700E2DAF9 /* CompanyEmployees.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CompanyEmployees.sqlite; sourceTree = "<group>"; };
 		2B45077713EC7E2E00E2DAF9 /* EmployeeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeInfo.h; sourceTree = "<group>"; };
 		2B45077813EC7E2E00E2DAF9 /* EmployeeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeInfo.m; sourceTree = "<group>"; };
+		2B5F66F913F036B400E64934 /* ChoosePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoosePictureViewController.h; sourceTree = "<group>"; };
+		2B5F66FA13F036B400E64934 /* ChoosePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosePictureViewController.m; sourceTree = "<group>"; };
+		2B5F66FB13F036B500E64934 /* ChoosePictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoosePictureViewController.xib; sourceTree = "<group>"; };
+		2B5F670B13F03C8200E64934 /* CameraOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraOverlayViewController.h; sourceTree = "<group>"; };
+		2B5F670C13F03C8200E64934 /* CameraOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraOverlayViewController.m; sourceTree = "<group>"; };
+		2B5F670D13F03C8200E64934 /* CameraOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraOverlayViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +132,12 @@
 				2B42C0FA13ECAA6900D5ABF1 /* EmployeeDetailsViewController.h */,
 				2B42C0FB13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.m */,
 				2B42C0FC13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.xib */,
+				2B5F670B13F03C8200E64934 /* CameraOverlayViewController.h */,
+				2B5F670C13F03C8200E64934 /* CameraOverlayViewController.m */,
+				2B5F670D13F03C8200E64934 /* CameraOverlayViewController.xib */,
+				2B5F66F913F036B400E64934 /* ChoosePictureViewController.h */,
+				2B5F66FA13F036B400E64934 /* ChoosePictureViewController.m */,
+				2B5F66FB13F036B500E64934 /* ChoosePictureViewController.xib */,
 			);
 			path = CompanyEmployees;
 			sourceTree = "<group>";
@@ -194,6 +210,8 @@
 				2B45077013EC6CB800E2DAF9 /* CompanyEmployees.sqlite in Resources */,
 				2B42C0F913EC932B00D5ABF1 /* ViewEmployeesViewController.xib in Resources */,
 				2B42C0FE13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.xib in Resources */,
+				2B5F66FD13F036B500E64934 /* ChoosePictureViewController.xib in Resources */,
+				2B5F670F13F03C8300E64934 /* CameraOverlayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +229,8 @@
 				2B45077913EC7E2E00E2DAF9 /* EmployeeInfo.m in Sources */,
 				2B42C0F813EC932B00D5ABF1 /* ViewEmployeesViewController.m in Sources */,
 				2B42C0FD13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.m in Sources */,
+				2B5F66FC13F036B500E64934 /* ChoosePictureViewController.m in Sources */,
+				2B5F670E13F03C8300E64934 /* CameraOverlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
