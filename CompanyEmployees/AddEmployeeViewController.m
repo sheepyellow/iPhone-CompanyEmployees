@@ -13,7 +13,7 @@
 
 @implementation AddEmployeeViewController
 
-@synthesize scrollView, choosePictureViewController, imgEmployeePhoto;
+@synthesize scrollView, choosePictureViewController, addPhoto, imgEmployeePhoto;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,28 +53,14 @@
     
     // Setup scroll view
     [scrollView setContentSize:CGSizeMake(scrollView.frame.size.width, scrollView.frame.size.height+200)];
-    
-    //scrollView.contentSize = 
-    //CGSizeMake(scrollView.frame.size.width, self.frame.size.height);
-	//scrollView.maximumZoomScale = 4.0;
-	//scrollView.minimumZoomScale = 0.75;
-	//scrollView.clipsToBounds = YES;
-	//scrollView.delegate = self;
-	//[scrollView addSubview:imageView];
 }
 
 
 - (void) viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	//Set the textboxes to empty string.
-	txtEmployeeEmail.text = @"";
-	txtEmployeeName.text = @"";
-    txtEmployeePhone.text = @"";
-    txtEmployeeDOB.text = @"";
-    txtEmployeeNotes.text = @"";
 	
-	//Make the coffe name textfield to be the first responder.
+	//Make the employee name textfield to be the first responder.
 	[txtEmployeeName becomeFirstResponder];
 }
 
@@ -91,6 +77,18 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void) clearFields {
+    //Set the textboxes to empty string.
+	txtEmployeeEmail.text = @"";
+	txtEmployeeName.text = @"";
+    txtEmployeePhone.text = @"";
+    txtEmployeeDOB.text = @"";
+    txtEmployeeNotes.text = @"";
+    // TODO: Clear addPhoto button image
+    [addPhoto setImage:nil forState:UIControlStateNormal];
+}
+
+
 - (void) save_Clicked:(id)sender {
 	
 	CompanyEmployeesAppDelegate *appDelegate = (CompanyEmployeesAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -101,25 +99,29 @@
 	employeeObj.employeeEmail = txtEmployeeEmail.text;
     employeeObj.employeePhone = txtEmployeePhone.text;
     employeeObj.employeeDOB = txtEmployeeDOB.text;
-    //employeeObj.employeePhoto
+    employeeObj.employeePhoto = imgEmployeePhoto;
     employeeObj.employeeNotes = txtEmployeeNotes.text;
 	employeeObj.isDirty = NO;
 	employeeObj.isDetailViewHydrated = YES;
+    
+    
 	
 	//Add the object
 	[appDelegate addEmployee:employeeObj];
+    
+    // Clear fields
+    [self clearFields];
 	
 	//Dismiss the controller.
-	//[self.navigationController dismissModalViewControllerAnimated:YES];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 
 - (void) cancel_Clicked:(id)sender {
-	
-	//Dismiss the controller.
-	//[self.navigationController dismissModalViewControllerAnimated:YES];
+    // Clear fields
+    [self clearFields];
     
+    //Dismiss the controller.
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -142,13 +144,6 @@
     [self.navigationController pushViewController:self.choosePictureViewController animated:YES];
 }
 
-- (void)didFinishWithCamera:(UIImage *)image {
-    [self.imgEmployeePhoto setImage:image];
-}
-- (void)didTakePicture:(UIImage *)picture {
-    
-}
-
 - (void)dealloc
 {	
     [txtEmployeeDOB release];
@@ -156,6 +151,7 @@
     [txtEmployeeName release];
     [txtEmployeePhone release];
     [txtEmployeeNotes release];
+    [addPhoto release];
     [imgEmployeePhoto release];
     [choosePictureViewController release];
     [scrollView release];

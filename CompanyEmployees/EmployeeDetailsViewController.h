@@ -13,8 +13,10 @@
 	IBOutlet UILabel *employeeEmail;
     IBOutlet UILabel *employeePhone;
     IBOutlet UILabel *employeeDOB;
-    IBOutlet UILabel *employeePhoto;
+    //IBOutlet UILabel *employeePhoto;
     IBOutlet UILabel *employeeNotes;
+    
+    IBOutlet UIButton *employeePhotoButton;
     
 }
 
@@ -22,7 +24,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *employeeEmail;
 @property (nonatomic, retain) IBOutlet UILabel *employeePhone;
 @property (nonatomic, retain) IBOutlet UILabel *employeeDOB;
-@property (nonatomic, retain) IBOutlet UILabel *employeePhoto;
+@property (nonatomic, retain) UIButton *employeePhotoButton;
 @property (nonatomic, retain) IBOutlet UILabel *employeeNotes;
 
 

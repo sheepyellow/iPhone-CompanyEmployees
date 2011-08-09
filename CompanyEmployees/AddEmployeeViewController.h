@@ -17,17 +17,20 @@
 	IBOutlet UITextField *txtEmployeeEmail;
    	IBOutlet UITextField *txtEmployeePhone;
    	IBOutlet UITextField *txtEmployeeDOB;
-   	IBOutlet UIImageView *imgEmployeePhoto;
    	IBOutlet UITextField *txtEmployeeNotes;
     
     ChoosePictureViewController *choosePictureViewController;
     IBOutlet UIScrollView *scrollView;
+    IBOutlet UIButton *addPhoto;
+    
+    UIImage *imgEmployeePhoto;
 }
 
 @property (nonatomic, retain) ChoosePictureViewController *choosePictureViewController;
 @property (nonatomic, retain) UIScrollView *scrollView;
 
-@property (nonatomic, retain) UIImageView *imgEmployeePhoto;
+@property (nonatomic, retain) UIButton *addPhoto;
+@property (nonatomic, retain) UIImage *imgEmployeePhoto;
 
 - (IBAction)choosePhoto:(id)sender;
 

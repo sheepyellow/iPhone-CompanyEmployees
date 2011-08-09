@@ -122,6 +122,7 @@
     [self.employeeDetailsViewController.employeePhone setText:[employee employeePhone]];
     [self.employeeDetailsViewController.employeeDOB setText:[employee employeeDOB]];
     [self.employeeDetailsViewController.employeeNotes setText:[employee employeeNotes]];
+    [self.employeeDetailsViewController.employeePhotoButton setImage:[employee employeePhoto] forState:UIControlStateNormal];
     
 	// Load the animals image into a NSData boject and then assign it to the UIImageView
 	//NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[animal imageURL]]];

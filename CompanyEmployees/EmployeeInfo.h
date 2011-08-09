@@ -15,7 +15,8 @@
     NSString *employeeEmail;
     NSString *employeePhone;
     NSString *employeeDOB;
-    NSString *employeePhoto;
+    NSString *employeePhotoPath;
+    UIImage *employeePhoto;
     NSString *employeeNotes;
 
     //Intrnal variables to keep track of the state of the object.
@@ -28,7 +29,8 @@
 @property (nonatomic, copy) NSString *employeeEmail;
 @property (nonatomic, copy) NSString *employeePhone;
 @property (nonatomic, copy) NSString *employeeDOB;
-@property (nonatomic, copy) NSString *employeePhoto;
+@property (nonatomic, copy) NSString *employeePhotoPath;
+@property (nonatomic, copy) UIImage *employeePhoto;
 @property (nonatomic, copy) NSString *employeeNotes;
 
 @property (nonatomic, readwrite) BOOL isDirty;

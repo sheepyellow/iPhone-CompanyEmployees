@@ -126,7 +126,7 @@
 	//Add it to the database.
 	[employeeObj addEmployee];
 	
-	//Add it to the coffee array.
+	//Add it to the employee array.
 	[employeeArray addObject:employeeObj];
 }
 

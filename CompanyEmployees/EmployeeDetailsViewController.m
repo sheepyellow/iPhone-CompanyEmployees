@@ -10,7 +10,7 @@
 
 @implementation EmployeeDetailsViewController
 
-@synthesize employeeName, employeeEmail, employeePhone, employeeDOB, employeePhoto, employeeNotes;
+@synthesize employeeName, employeeEmail, employeePhone, employeeDOB, employeePhotoButton, employeeNotes;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

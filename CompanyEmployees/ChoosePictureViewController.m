@@ -136,7 +136,9 @@
         [self.imageView setImage:self.capturedImage];
         
         // TODO: This is a hack!
-        [self.addEmployeeViewController.imgEmployeePhoto setImage:self.capturedImage];
+        self.addEmployeeViewController.imgEmployeePhoto = [self.capturedImage copy];
+        [self.addEmployeeViewController.addPhoto setImage:self.capturedImage forState:UIControlStateNormal];
+        //[self.addEmployeeViewController.imgEmployeePhoto setImage:self.capturedImage];
     }
 }
 
