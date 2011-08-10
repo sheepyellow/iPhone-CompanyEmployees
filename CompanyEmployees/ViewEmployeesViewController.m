@@ -124,7 +124,9 @@
     [self.employeeDetailsViewController.employeeDOB setText:[employee employeeDOB]];
     [self.employeeDetailsViewController.employeeNotes setText:[employee employeeNotes]];
     [self.employeeDetailsViewController.employeePhotoButton setImage:[employee employeePhoto] forState:UIControlStateNormal];
+    [self.employeeDetailsViewController.employeePhotoButton.imageView setContentMode:UIViewContentModeScaleAspectFit];
     self.employeeDetailsViewController.employeePhoto = employee.employeePhoto;
+    
 }
 
 - (void)tableView:(UITableView *)tv commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
