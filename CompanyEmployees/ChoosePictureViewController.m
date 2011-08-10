@@ -139,6 +139,7 @@
         self.addEmployeeViewController.imgEmployeePhoto = self.capturedImage;
         [self.addEmployeeViewController.addPhoto setImage:self.capturedImage forState:UIControlStateNormal];
         [self.addEmployeeViewController.addPhoto.imageView setContentMode:UIViewContentModeScaleAspectFit];
+        //[self.capturedImage release];
     }
 }
 

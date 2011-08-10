@@ -62,6 +62,7 @@
 	
 	//Make the employee name textfield to be the first responder.
 	[txtEmployeeName becomeFirstResponder];
+    
 }
 
 - (void)viewDidUnload
@@ -85,6 +86,9 @@
     txtEmployeeDOB.text = @"";
     txtEmployeeNotes.text = @"";
     [addPhoto setImage:nil forState:UIControlStateNormal];
+    
+    // TODO: Hack
+    self.choosePictureViewController.imageView.image = nil;
 }
 
 
