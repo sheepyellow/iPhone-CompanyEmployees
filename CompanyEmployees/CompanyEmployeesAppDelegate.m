@@ -21,7 +21,7 @@
     //Copy database to the user's phone if needed.
 	[self copyDatabaseIfNeeded];
 	
-	//Initialize the coffee array.
+	//Initialize the employee array.
 	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
 	self.employeeArray = tempArray;
 	[tempArray release];

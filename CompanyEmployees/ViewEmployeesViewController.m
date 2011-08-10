@@ -41,8 +41,6 @@
 	//self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] 
 	//										 initWithBarButtonSystemItem:UIBarButtonSystemItemAdd 
 	//										 target:self action:@selector(add_Clicked:)];
-    
-    
 	
 	appDelegate = (CompanyEmployeesAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
@@ -61,13 +59,6 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
-
-
-
-
-
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -92,10 +83,17 @@
 	EmployeeInfo *employeeObj = [appDelegate.employeeArray objectAtIndex:indexPath.row];
 	
 	//Set the employeeName.
-	cell.textLabel.text = employeeObj.employeeName;
+    if (![employeeObj.employeeName isEqualToString:@""]) {
+        cell.textLabel.text = employeeObj.employeeName;
+    }
+    else {
+        cell.textLabel.text = @"N/A";
+    }
     
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"D.O.B: %@", employeeObj.employeeDOB];
-    
+    if (![employeeObj.employeeDOB isEqualToString:@""]) {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"DOB: %@", employeeObj.employeeDOB];
+    }
+
     [cell.imageView setImage:employeeObj.employeePhoto];
     
     // Set up the cell
@@ -106,7 +104,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic -- create and push a new view controller
     
-    CompanyEmployeesAppDelegate *appDelegate = (CompanyEmployeesAppDelegate *)[[UIApplication sharedApplication] delegate];
+    //CompanyEmployeesAppDelegate *appDelegate = (CompanyEmployeesAppDelegate *)[[UIApplication sharedApplication] delegate];
 	EmployeeInfo *employee = (EmployeeInfo *)[appDelegate.employeeArray objectAtIndex:indexPath.row];
 	
 	if(self.employeeDetailsViewController == nil) {
@@ -117,27 +115,16 @@
 	
 	// Setup the animation
 	[self.navigationController pushViewController:self.employeeDetailsViewController animated:YES];
-	// Set the title of the view to the animal's name
-    self.employeeDetailsViewController.title = [employee employeeName];
     
+	// Set the title of the view to the employee's name
+    self.employeeDetailsViewController.title = [employee employeeName];
 	[self.employeeDetailsViewController.employeeName setText:[employee employeeName]];
-	// Set the description field to the animals description
 	[self.employeeDetailsViewController.employeeEmail setText:[employee employeeEmail]];
     [self.employeeDetailsViewController.employeePhone setText:[employee employeePhone]];
     [self.employeeDetailsViewController.employeeDOB setText:[employee employeeDOB]];
     [self.employeeDetailsViewController.employeeNotes setText:[employee employeeNotes]];
     [self.employeeDetailsViewController.employeePhotoButton setImage:[employee employeePhoto] forState:UIControlStateNormal];
-    
-	// Load the animals image into a NSData boject and then assign it to the UIImageView
-	//NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[animal imageURL]]];
-	//UIImage *animalImage = [[UIImage alloc] initWithData:imageData cache:YES];
-	//self.animalView.animalImage.image = animalImage;
 }
-
-
-
-
-
 
 - (void)tableView:(UITableView *)tv commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
 forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -178,46 +165,18 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
  }
  */
 
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 	
 	[self.tableView reloadData];
 }
-/*
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
-	
-	[super setEditing:editing animated:animated];
-    [self.tableView setEditing:editing animated:YES];
-	
-	//Do not let the user add if the app is in edit mode.
-	if(editing)
-		self.navigationItem.leftBarButtonItem.enabled = NO;
-	else
-		self.navigationItem.leftBarButtonItem.enabled = YES;
-}
- */
-
-/*
- - (void)viewDidAppear:(BOOL)animated {
- [super viewDidAppear:animated];
- }
- */
-/*
- - (void)viewWillDisappear:(BOOL)animated {
- }
- */
-/*
- - (void)viewDidDisappear:(BOOL)animated {
- }
- */
 
 - (void)dealloc {
 	[appDelegate release];
-	//[avController release];
+    [employeeDetailsViewController release];
+    
     [super dealloc];
 }
-
 
 
 @end

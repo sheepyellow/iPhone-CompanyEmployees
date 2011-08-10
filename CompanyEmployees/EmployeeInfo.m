@@ -74,7 +74,12 @@ static sqlite3_stmt *addStmt = nil;
 }
 
 - (void) deleteEmployee {
-	
+    
+    // Delete Image
+    if (![self.employeePhotoPath isEqualToString:@""]) {
+        [[NSFileManager defaultManager] removeItemAtPath:self.employeePhotoPath error:nil];
+    }
+    
 	if(deleteStmt == nil) {
 		const char *sql = "delete from CompanyEmployees where employeeID = ?";
 		if(sqlite3_prepare_v2(database, sql, -1, &deleteStmt, NULL) != SQLITE_OK)
@@ -100,7 +105,7 @@ static sqlite3_stmt *addStmt = nil;
         NSString *unexpandedImagePath = [folderPath stringByAppendingFormat:@"/%@.png", [[NSProcessInfo processInfo] globallyUniqueString]]; // Generate random string for image name
         self.employeePhotoPath = [NSString pathWithComponents:[NSArray arrayWithObjects:[NSString stringWithString:[unexpandedImagePath stringByExpandingTildeInPath]], nil]];
         if (![[NSFileManager defaultManager] fileExistsAtPath:folderPath isDirectory:NULL]) {
-            [[NSFileManager defaultManager] createDirectoryAtPath:folderPath attributes:nil];
+            [[NSFileManager defaultManager] createDirectoryAtPath:folderPath withIntermediateDirectories:YES attributes:nil error:nil];
         }
         
         NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(self.employeePhoto)];
