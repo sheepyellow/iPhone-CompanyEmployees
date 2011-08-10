@@ -1,16 +1,16 @@
 //
-//  EmployeeDetailsViewController.m
+//  PhotoViewController.m
 //  CompanyEmployees
 //
-//  Created by Kevin Johnson on 8/5/11.
+//  Created by Kevin Johnson on 8/9/11.
 //  Copyright 2011 Home. All rights reserved.
 //
 
-#import "EmployeeDetailsViewController.h"
+#import "PhotoViewController.h"
 
-@implementation EmployeeDetailsViewController
+@implementation PhotoViewController
 
-@synthesize employeeName, employeeEmail, employeePhone, employeeDOB, employeePhotoButton, employeeNotes, photoViewController, employeePhoto;
+@synthesize imageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -18,10 +18,7 @@
     if (self) {
         // Custom initialization
         
-        self.photoViewController = [[PhotoViewController alloc] initWithNibName:@"PhotoViewController" bundle:nil];
-        
-        
-        
+        self.imageView = [[UIImageView alloc] init];
     }
     return self;
 }
@@ -55,19 +52,10 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)photoButtonPressed:(id)sender {
-    //[self.photoViewController setView:[self.employeePhotoButton imageForState:UIControlStateNormal]];
-    //self.photoViewController = [[PhotoViewController alloc] initWithNibName:@"PhotoViewController" bundle:nil];
-    
-    
-    [self.navigationController pushViewController:self.photoViewController animated:YES];
-    
-    self.photoViewController.imageView.image = self.employeePhoto;
-}
-
 - (void) dealloc {
-    [photoViewController release];
+    [imageView release];
     
     [super dealloc];
 }
+
 @end

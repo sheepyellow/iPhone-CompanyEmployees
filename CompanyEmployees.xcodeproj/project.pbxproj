@@ -29,6 +29,8 @@
 		2B5F66FD13F036B500E64934 /* ChoosePictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5F66FB13F036B500E64934 /* ChoosePictureViewController.xib */; };
 		2B5F670E13F03C8300E64934 /* CameraOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F670C13F03C8200E64934 /* CameraOverlayViewController.m */; };
 		2B5F670F13F03C8300E64934 /* CameraOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5F670D13F03C8200E64934 /* CameraOverlayViewController.xib */; };
+		2B63396513F2321700F69C12 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B63396313F2321600F69C12 /* PhotoViewController.m */; };
+		2B63396613F2321700F69C12 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B63396413F2321600F69C12 /* PhotoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,9 @@
 		2B5F670B13F03C8200E64934 /* CameraOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraOverlayViewController.h; sourceTree = "<group>"; };
 		2B5F670C13F03C8200E64934 /* CameraOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraOverlayViewController.m; sourceTree = "<group>"; };
 		2B5F670D13F03C8200E64934 /* CameraOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraOverlayViewController.xib; sourceTree = "<group>"; };
+		2B63396213F2321600F69C12 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		2B63396313F2321600F69C12 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		2B63396413F2321600F69C12 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +143,9 @@
 				2B5F66F913F036B400E64934 /* ChoosePictureViewController.h */,
 				2B5F66FA13F036B400E64934 /* ChoosePictureViewController.m */,
 				2B5F66FB13F036B500E64934 /* ChoosePictureViewController.xib */,
+				2B63396213F2321600F69C12 /* PhotoViewController.h */,
+				2B63396313F2321600F69C12 /* PhotoViewController.m */,
+				2B63396413F2321600F69C12 /* PhotoViewController.xib */,
 			);
 			path = CompanyEmployees;
 			sourceTree = "<group>";
@@ -212,6 +220,7 @@
 				2B42C0FE13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.xib in Resources */,
 				2B5F66FD13F036B500E64934 /* ChoosePictureViewController.xib in Resources */,
 				2B5F670F13F03C8300E64934 /* CameraOverlayViewController.xib in Resources */,
+				2B63396613F2321700F69C12 /* PhotoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +240,7 @@
 				2B42C0FD13ECAA6A00D5ABF1 /* EmployeeDetailsViewController.m in Sources */,
 				2B5F66FC13F036B500E64934 /* ChoosePictureViewController.m in Sources */,
 				2B5F670E13F03C8300E64934 /* CameraOverlayViewController.m in Sources */,
+				2B63396513F2321700F69C12 /* PhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

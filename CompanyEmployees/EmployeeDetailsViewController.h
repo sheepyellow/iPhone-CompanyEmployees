@@ -7,18 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoViewController.h"
 
 @interface EmployeeDetailsViewController : UIViewController {
     IBOutlet UILabel *employeeName;
 	IBOutlet UILabel *employeeEmail;
     IBOutlet UILabel *employeePhone;
     IBOutlet UILabel *employeeDOB;
-    //IBOutlet UILabel *employeePhoto;
+    UIImage *employeePhoto;
     IBOutlet UILabel *employeeNotes;
     
     IBOutlet UIButton *employeePhotoButton;
     
-    IBOutlet UIImageView *imageView;
+    PhotoViewController *photoViewController;
     
 }
 
@@ -28,8 +29,9 @@
 @property (nonatomic, retain) IBOutlet UILabel *employeeDOB;
 @property (nonatomic, retain) UIButton *employeePhotoButton;
 @property (nonatomic, retain) IBOutlet UILabel *employeeNotes;
+@property (nonatomic, retain) UIImage *employeePhoto;
 - (IBAction)photoButtonPressed:(id)sender;
 
-@property (nonatomic, retain) UIImageView *imageView;
+@property (nonatomic, retain) PhotoViewController *photoViewController;
 
 @end
