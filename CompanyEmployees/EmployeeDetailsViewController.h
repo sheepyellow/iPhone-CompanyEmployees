@@ -18,6 +18,8 @@
     
     IBOutlet UIButton *employeePhotoButton;
     
+    IBOutlet UIImageView *imageView;
+    
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *employeeName;
@@ -26,6 +28,8 @@
 @property (nonatomic, retain) IBOutlet UILabel *employeeDOB;
 @property (nonatomic, retain) UIButton *employeePhotoButton;
 @property (nonatomic, retain) IBOutlet UILabel *employeeNotes;
+- (IBAction)photoButtonPressed:(id)sender;
 
+@property (nonatomic, retain) UIImageView *imageView;
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation EmployeeDetailsViewController
 
-@synthesize employeeName, employeeEmail, employeePhone, employeeDOB, employeePhotoButton, employeeNotes;
+@synthesize employeeName, employeeEmail, employeePhone, employeeDOB, employeePhotoButton, employeeNotes, imageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,4 +50,9 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)photoButtonPressed:(id)sender {
+    [self.view addSubview:imageView];
+    [self.view bringSubviewToFront:imageView];
+    //[self.navigationController presentModalViewController:[employeePhotoButton viewWithTag:0] animated:YES];
+}
 @end

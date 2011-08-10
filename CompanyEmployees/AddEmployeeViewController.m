@@ -84,7 +84,6 @@
     txtEmployeePhone.text = @"";
     txtEmployeeDOB.text = @"";
     txtEmployeeNotes.text = @"";
-    // TODO: Clear addPhoto button image
     [addPhoto setImage:nil forState:UIControlStateNormal];
 }
 
@@ -108,6 +107,7 @@
 	
 	//Add the object
 	[appDelegate addEmployee:employeeObj];
+    [employeeObj release];
     
     // Clear fields
     [self clearFields];

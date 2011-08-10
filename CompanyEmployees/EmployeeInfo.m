@@ -155,7 +155,7 @@ static sqlite3_stmt *addStmt = nil;
     [employeeDOB release];
     [employeeNotes release];
     [employeePhone release];
-    //[employeePhoto release];
+    [employeePhoto release];
     [employeePhotoPath release];
 	[super dealloc];
 }
