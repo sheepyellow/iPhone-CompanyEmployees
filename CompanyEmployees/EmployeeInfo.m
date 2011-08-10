@@ -106,6 +106,7 @@ static sqlite3_stmt *addStmt = nil;
         NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(self.employeePhoto)];
         [imageData writeToFile:self.employeePhotoPath atomically:YES];
         
+        // TODO: Releasing these variables causes BAD_ACCESS errors somewhere in the program. Probably look into this
         //[homeDirectoryPath release];
         //[unexpandedPath release];
         //[folderPath release];

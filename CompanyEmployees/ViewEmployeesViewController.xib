@@ -37,6 +37,7 @@
 						<string key="NSFrameSize">{320, 247}</string>
 						<reference key="NSSuperview" ref="385879226"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:392</string>
 						<object class="NSColor" key="IBUIBackgroundColor" id="566552119">
 							<int key="NSColorSpace">3</int>
@@ -56,6 +57,7 @@
 				<string key="NSFrameSize">{320, 247}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView" ref="864157890"/>
 				<string key="NSReuseIdentifierKey">_NS:392</string>
 				<reference key="IBUIBackgroundColor" ref="566552119"/>
 				<bool key="IBUIClipsSubviews">YES</bool>
@@ -64,7 +66,7 @@
 				<int key="IBUISeparatorStyle">1</int>
 				<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
 				<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
-				<float key="IBUIRowHeight">44</float>
+				<float key="IBUIRowHeight">61</float>
 				<float key="IBUISectionHeaderHeight">22</float>
 				<float key="IBUISectionFooterHeight">22</float>
 				<reference key="IBUITableHeaderView" ref="864157890"/>
@@ -127,6 +129,7 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">13</int>
 						<reference key="object" ref="864157890"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="385879226"/>
 					</object>
 				</array>
@@ -143,7 +146,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">16</int>
+			<int key="maxID">21</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

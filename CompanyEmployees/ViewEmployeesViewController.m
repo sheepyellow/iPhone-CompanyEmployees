@@ -85,14 +85,18 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
 	
 	//Get the object from the array.
 	EmployeeInfo *employeeObj = [appDelegate.employeeArray objectAtIndex:indexPath.row];
 	
 	//Set the employeeName.
-	cell.text = employeeObj.employeeName;
+	cell.textLabel.text = employeeObj.employeeName;
+    
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"D.O.B: %@", employeeObj.employeeDOB];
+    
+    [cell.imageView setImage:employeeObj.employeePhoto];
     
     // Set up the cell
     return cell;
