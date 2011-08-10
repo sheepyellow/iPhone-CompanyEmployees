@@ -17,11 +17,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
-        self.photoViewController = [[PhotoViewController alloc] initWithNibName:@"PhotoViewController" bundle:nil];
-        
-        
-        
     }
     return self;
 }
@@ -56,9 +51,12 @@
 }
 
 - (IBAction)photoButtonPressed:(id)sender {
-    //[self.photoViewController setView:[self.employeePhotoButton imageForState:UIControlStateNormal]];
-    //self.photoViewController = [[PhotoViewController alloc] initWithNibName:@"PhotoViewController" bundle:nil];
     
+    if(self.photoViewController == nil) {
+        PhotoViewController *viewController = [[PhotoViewController alloc] initWithNibName:@"PhotoViewController" bundle:nil];
+        self.photoViewController = viewController;
+        [viewController release];
+    }
     
     [self.navigationController pushViewController:self.photoViewController animated:YES];
     

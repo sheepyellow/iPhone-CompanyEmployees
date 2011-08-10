@@ -18,7 +18,7 @@
     if (self) {
         // Custom initialization
         
-        self.imageView = [[UIImageView alloc] init];
+        //self.imageView = [[UIImageView alloc] init];
     }
     return self;
 }
